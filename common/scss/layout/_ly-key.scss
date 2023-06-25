@@ -1,0 +1,14 @@
+@use "../lib" as l;
+
+.ly_key {
+  padding-top: 128px;
+  &_inner {
+    @include l.center;
+  }
+}
+
+@include l.break_sp {
+  .ly_key {
+    padding-top: 68px;
+  }
+}

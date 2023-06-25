@@ -1,0 +1,50 @@
+@use "../../lib" as l;
+
+.bl_contact {
+  &_title {
+    text-align: center;
+    font-size: l.$titleFont;
+    padding-bottom: 30px;
+  }
+  &_items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &_num {
+    border-right: 1px solid l.$cFont;
+  }
+  &_numText {
+    padding-right: 50px;
+    padding-bottom: 5px;
+    font-size: l.$smollFont;
+    &:first-of-type {
+      font-size: l.$upFont;
+    }
+  }
+  &_mail {
+    padding-left: 50px;
+  }
+  &_mailLink {
+    display: block;
+    padding: 15px;
+    border: 1px solid l.$cFont;
+  }
+}
+@include l.break_sp {
+  .bl_contact {
+    &_num {
+      border-right: none;
+      padding-bottom: 30px;
+    }
+    &_numText {
+      padding-right: 0;
+    }
+    &_items {
+      flex-direction: column;
+    }
+    &_mail {
+      padding-left: 0;
+    }
+  }
+}

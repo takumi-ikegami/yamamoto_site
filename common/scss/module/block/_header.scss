@@ -1,0 +1,86 @@
+@use "../../lib" as l;
+
+.bl_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_title {
+    font-size: l.$titleFont;
+    font-family: l.$mainTitle;
+    color: l.$cFont;
+  }
+
+  &_sideMenu {
+    text-align: right;
+  }
+
+  &_text {
+    font-size: l.$smollFont;
+  }
+
+  &_tel {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: l.$upFont;
+  }
+
+  &_textInner {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding: 3px;
+    color: l.$cWhite;
+
+    &:first-of-type {
+      background-color: l.$cSub;
+    }
+
+    &:last-of-type {
+      background-color: l.$cMain;
+    }
+  }
+}
+
+@include l.break_pc {
+  .bl_header {
+    &_phone {
+      display: none;
+    }
+  }
+}
+
+@include l.break_sp {
+  .bl_header {
+    &_sideMenu {
+      display: flex;
+      align-items: center;
+    }
+
+    &_title {
+      font-size: l.$sptitle;
+    }
+
+    &_text {
+      display: none;
+      align-items: center;
+    }
+
+    &_tel {
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 10px;
+    }
+
+    &_phone {
+      width: 38px;
+      height: 38px;
+      cursor: pointer;
+    }
+
+    &_textInner {
+      display: none;
+    }
+  }
+}

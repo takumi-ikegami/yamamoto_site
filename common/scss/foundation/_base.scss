@@ -1,0 +1,20 @@
+@use "../lib" as l;
+
+html {
+  font-size: l.$baseSize;
+  font-family: l.$baseFont;
+  //   color: l.$cText;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+// a {
+//   color: l.$cText;
+// }
